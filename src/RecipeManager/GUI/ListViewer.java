@@ -12,7 +12,9 @@ public class ListViewer {
 
     public ListViewer() {
         this.mainFrame.setLayout(new BorderLayout());
-        this.mainFrame.add(recipeList);
+        this.mainFrame.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+        this.mainFrame.add(recipeList,BorderLayout.CENTER);
+
     }
 
     public JPanel getList() {
