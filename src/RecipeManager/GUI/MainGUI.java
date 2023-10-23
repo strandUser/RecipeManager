@@ -10,13 +10,13 @@ public class MainGUI extends JFrame {
     private JPanel mainPanel = new JPanel();
     private JTabbedPane tabbedPane = new JTabbedPane();
 
-    //Components
-    private RightControls rControls = new RightControls();
-    private LeftControls lControls = new LeftControls();
+    //Components for tabs
+    private RightControls rControls = new RightControls(); //Temp
+    private LeftControls lControls = new LeftControls(); //Temp
     private ListViewer lview = new ListViewer();
 
     public MainGUI(){
-        //this.mainPanel.setLayout(new GridLayout(1,1));
+        this.mainPanel.setLayout(new BorderLayout());
         //this.tabbedPane.setLayout(new GridLayout(2,2));
 
         //TODO: add things here
@@ -24,8 +24,11 @@ public class MainGUI extends JFrame {
         this.tabbedPane.addTab("Recipe List",lview.getList());
         this.tabbedPane.addTab("Tab 2",lControls.getRightControls());
 
+        //add tabs
+        this.mainPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        this.mainPanel.add(tabbedPane,BorderLayout.CENTER);
 
-        add(this.tabbedPane);
+        add(this.mainPanel);
         setSize(frameWidth,frameHeight);
     }
 
