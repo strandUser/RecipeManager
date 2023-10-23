@@ -6,7 +6,7 @@ import java.awt.*;
 public class ListViewer {
     //save list that is passed in here locally so it can be set and get
     JPanel mainFrame = new JPanel();
-    JList<String> recipeList = new JList<String>();
+    JList<String> recipeList = new JList<>();
 
 
 
