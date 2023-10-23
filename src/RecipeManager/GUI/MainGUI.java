@@ -8,17 +8,23 @@ public class MainGUI extends JFrame {
     private int frameWidth = 750;
     private int frameHeight = 500;
     private JPanel mainPanel = new JPanel();
+    private JTabbedPane tabbedPane = new JTabbedPane();
 
     //Components
     private RightControls rControls = new RightControls();
+    private LeftControls lControls = new LeftControls();
 
     public MainGUI(){
-        this.mainPanel.setLayout(new GridLayout(1,2));
+        //this.mainPanel.setLayout(new GridLayout(1,1));
+        //this.tabbedPane.setLayout(new GridLayout(2,2));
 
         //TODO: add things here
-        this.mainPanel.add(rControls.getRightControls());
+        //this.mainPanel.add(tabbedPane);
+        this.tabbedPane.addTab("Recipe List",rControls.getRightControls());
+        this.tabbedPane.addTab("Tab 2",lControls.getRightControls());
 
-        add(this.mainPanel);
+
+        add(this.tabbedPane);
         setSize(frameWidth,frameHeight);
     }
 
