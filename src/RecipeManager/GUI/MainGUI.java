@@ -13,6 +13,7 @@ public class MainGUI extends JFrame {
     //Components
     private RightControls rControls = new RightControls();
     private LeftControls lControls = new LeftControls();
+    private ListViewer lview = new ListViewer();
 
     public MainGUI(){
         //this.mainPanel.setLayout(new GridLayout(1,1));
@@ -20,7 +21,7 @@ public class MainGUI extends JFrame {
 
         //TODO: add things here
         //this.mainPanel.add(tabbedPane);
-        this.tabbedPane.addTab("Recipe List",rControls.getRightControls());
+        this.tabbedPane.addTab("Recipe List",lview.getList());
         this.tabbedPane.addTab("Tab 2",lControls.getRightControls());
 
 

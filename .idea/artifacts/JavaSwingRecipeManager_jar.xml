@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaSwingRecipeManager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaSwingRecipeManager_jar</output-path>
+    <root id="archive" name="JavaSwingRecipeManager.jar">
+      <element id="module-output" name="JavaSwingRecipeManager" />
+    </root>
+  </artifact>
+</component>
