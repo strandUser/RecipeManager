@@ -2,6 +2,8 @@ package RecipeManager.GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Map;
+import java.util.TreeMap;
 import RecipeManager.GUI.RightControls.*;
 
 public class MainGUI extends JFrame {
@@ -10,10 +12,17 @@ public class MainGUI extends JFrame {
     private JPanel mainPanel = new JPanel();
     private JTabbedPane tabbedPane = new JTabbedPane();
 
+    //Recipe Lists
+    private Map<String, Map<String,String>> recipeList = new TreeMap();
+
     //Components for tabs
     private RightControls rControls = new RightControls(); //Temp
     private LeftControls lControls = new LeftControls(); //Temp
-    private ListViewer lview = new ListViewer();
+    private ListViewer lview = new ListViewer(recipeList);
+
+
+
+
 
     public MainGUI(){
         this.mainPanel.setLayout(new BorderLayout());
@@ -22,7 +31,7 @@ public class MainGUI extends JFrame {
         //TODO: add things here
         //this.mainPanel.add(tabbedPane);
         this.tabbedPane.addTab("Recipe List",lview.getList());
-        this.tabbedPane.addTab("Tab 2",lControls.getRightControls());
+        this.tabbedPane.addTab("Add Recipes",lControls.getRightControls());
 
         //add tabs
         this.mainPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
