@@ -19,6 +19,7 @@ public class MainGUI extends JFrame {
     private RightControls rControls = new RightControls(); //Temp
     private LeftControls lControls = new LeftControls(); //Temp
     private ListViewer lview = new ListViewer(recipeList);
+    private AddRecipeControls addRec = new AddRecipeControls();
 
 
 
@@ -31,7 +32,7 @@ public class MainGUI extends JFrame {
         //TODO: add things here
         //this.mainPanel.add(tabbedPane);
         this.tabbedPane.addTab("Recipe List",lview.getList());
-        this.tabbedPane.addTab("Add Recipes",lControls.getRightControls());
+        this.tabbedPane.addTab("Add Recipes",addRec.getAddControls());
 
         //add tabs
         this.mainPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
