@@ -42,4 +42,10 @@ class JUnitTests {
         LeftControls lTest = new LeftControls();
         assertNotNull(lTest);
     }
+
+    @Test
+    void generalNotesSetupTest() {
+        GeneralNotes testNotes = new GeneralNotes();
+        assertNotNull(testNotes);
+    }
 }

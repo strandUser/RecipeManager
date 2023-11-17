@@ -21,6 +21,8 @@ public class MainGUI extends JFrame {
     private ListViewer lview = new ListViewer(recipeList);
     private AddRecipeControls addRec = new AddRecipeControls();
 
+    private GeneralNotes notesSection = new GeneralNotes();
+
 
 
 
@@ -33,6 +35,7 @@ public class MainGUI extends JFrame {
         //this.mainPanel.add(tabbedPane);
         this.tabbedPane.addTab("Recipe List",lview.getList());
         this.tabbedPane.addTab("Add Recipes",addRec.getAddControls());
+        this.tabbedPane.addTab("Notes",notesSection.getNotesFrame());
 
         //add tabs
         this.mainPanel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
