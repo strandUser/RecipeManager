@@ -12,9 +12,8 @@ public class AddRecipeControls {
     JPanel mainFrame = new JPanel();
     JPanel mainGrid = new JPanel();
     JLabel testLabel = new JLabel();
-    JTextField testText = new JTextField();
-    TextFieldActionListener testLogic = new TextFieldActionListener();
-    SaveButtonLogic buttonLogic = new SaveButtonLogic(mainFrame,testText,testLabel);
+    TextFieldActionListener fieldListenerUser = new TextFieldActionListener();
+
     JButton testButton = new JButton("Save Recipe");
     JPanel buttonBorder = new JPanel();
 
@@ -28,6 +27,8 @@ public class AddRecipeControls {
     JTextField websiteNameField = new JTextField();
     JTextField instructionsField = new JTextField();
 
+    SaveButtonLogic buttonLogic = new SaveButtonLogic(mainFrame,recipeNameField, websiteNameField, instructionsField, testLabel);
+
     public AddRecipeControls(){
         this.mainFrame.setLayout(new BorderLayout());
         this.mainFrame.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
@@ -35,8 +36,11 @@ public class AddRecipeControls {
         this.mainGrid.setLayout(new GridLayout(4,2));
         this.mainFrame.add(mainGrid);
 
-        this.testText.addActionListener(testLogic);
-        //System.out.println(testText.getText());
+        //add action listeners
+
+        this.recipeNameField.addActionListener(fieldListenerUser);
+        this.websiteNameField.addActionListener(fieldListenerUser);
+        this.instructionsField.addActionListener(fieldListenerUser);
 
         this.buttonBorder.setLayout(new BorderLayout());
         this.buttonBorder.setBorder(BorderFactory.createEmptyBorder(25,25,25,25));
@@ -53,6 +57,7 @@ public class AddRecipeControls {
         this.mainGrid.add(instructions);
         this.mainGrid.add(instructionsField);
         this.mainGrid.add(buttonBorder);
+        this.mainGrid.add(testLabel);
 
 
     }
