@@ -32,9 +32,12 @@ public class SaveButtonLogic implements ActionListener {
         if (this.nameInput.getText().isEmpty() || this.websiteInput.getText().isEmpty() || this.instructionsInput.getText().isEmpty()){
             JOptionPane.showMessageDialog(null,"Fill in all fields","ERROR",JOptionPane.ERROR_MESSAGE);
         }
+        else{ //This is a good form filled out
+            recipeSaveStructure newCreationTest = new recipeSaveStructure(nameInput.getText(),websiteInput.getText(),instructionsInput.getText());
+            System.out.println(newCreationTest.toJson().get("recipeName"));
 
-
-        this.userOut.setText(nameInput.getText());
-        this.test.updateUI();
+            this.userOut.setText(nameInput.getText());
+            this.test.updateUI();
+        }
     }
 }

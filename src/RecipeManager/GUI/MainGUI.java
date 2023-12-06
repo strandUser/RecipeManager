@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Map;
 import java.util.TreeMap;
+import RecipeManager.GUI.*;
 import RecipeManager.GUI.RightControls.*;
 
 public class MainGUI extends JFrame {
