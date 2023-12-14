@@ -14,6 +14,8 @@ public class AddRecipeControls {
     JLabel testLabel = new JLabel();
     TextFieldActionListener fieldListenerUser = new TextFieldActionListener();
 
+    Map<String,Map<String,String>> listOfRecipes;
+
     JButton testButton = new JButton("Save Recipe");
     JPanel buttonBorder = new JPanel();
 
@@ -27,9 +29,10 @@ public class AddRecipeControls {
     JTextField websiteNameField = new JTextField();
     JTextField instructionsField = new JTextField();
 
-    SaveButtonLogic buttonLogic = new SaveButtonLogic(mainFrame,recipeNameField, websiteNameField, instructionsField, testLabel);
+    SaveButtonLogic buttonLogic = new SaveButtonLogic(mainFrame,recipeNameField, websiteNameField, in   structionsField, testLabel,);
 
-    public AddRecipeControls(){
+    public AddRecipeControls(Map<String,Map<String,String>> listToAdd){
+        this.listOfRecipes = listToAdd;
         this.mainFrame.setLayout(new BorderLayout());
         this.mainFrame.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
 

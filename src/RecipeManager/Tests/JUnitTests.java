@@ -20,7 +20,7 @@ class JUnitTests {
 
     @Test
     void addRecipeSetupTest() {
-        AddRecipeControls testObj = new AddRecipeControls();
+        AddRecipeControls testObj = new AddRecipeControls(new TreeMap<>());
         assertNotNull(testObj,"Failed to setup AddRecipeControls");
     }
 

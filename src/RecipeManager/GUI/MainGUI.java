@@ -14,13 +14,13 @@ public class MainGUI extends JFrame {
     private JTabbedPane tabbedPane = new JTabbedPane();
 
     //Recipe Lists
-    private Map<String, Map<String,String>> recipeList = new TreeMap();
+    private Map<String, Map<String,String>> recipeList = new TreeMap<>();
 
     //Components for tabs
     private RightControls rControls = new RightControls(); //Temp
     private LeftControls lControls = new LeftControls(); //Temp
     private ListViewer lview = new ListViewer(recipeList);
-    private AddRecipeControls addRec = new AddRecipeControls();
+    private AddRecipeControls addRec = new AddRecipeControls(recipeList);
 
     private GeneralNotes notesSection = new GeneralNotes();
 
